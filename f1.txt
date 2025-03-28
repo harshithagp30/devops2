@@ -55,8 +55,7 @@ RUN javac -d classess src/hii/hello.java
 CMD ["java","-cp","classess","hii.hello"]
 
 #PYTHON
-FROM openjdk:23
+FROM python:3.12
 WORKDIR /app
-COPY hello.java src/hii/hello.java
-RUN javac -d classess src/hii/hello.java
-CMD ["java","-cp","classess","hii.hello"]
+COPY dhatri.py src/harshi/dhatri.py
+CMD ["python","src/harshi/dhatri.py"]
