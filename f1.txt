@@ -50,12 +50,15 @@ LAB-4
 #DOCKER FILE:(JAVA)
 FROM openjdk:23
 WORKDIR /app
-COPY hello.java src/hii/hello.java
-RUN javac -d classess src/hii/hello.java
-CMD ["java","-cp","classess","hii.hello"]
+COPY dhatri.java src/harshi/dhatri.java
+RUN javac -d classess src/harshi/dhatri.java
+CMD ["java","-cp","classess","harshi.dhatri"]
 
 #PYTHON
 FROM python:3.12
 WORKDIR /app
 COPY dhatri.py src/harshi/dhatri.py
 CMD ["python","src/harshi/dhatri.py"]
+
+
+docker build -t app .
