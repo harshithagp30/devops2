@@ -62,3 +62,11 @@ CMD ["python","src/harshi/dhatri.py"]
 
 
 docker build -t app .
+
+/////revert/////
+git rm example.txt
+git commit -m "Removed example.txt"
+git push origin main
+git log
+git revert paste (commit hash)
+git push origin main 
